@@ -33,6 +33,7 @@ object RoutingHelper {
   }
 
   /**
+   * Implementation of Floyd–Warshall algorithm with path reconstruction modifications
    * @return (distance matrix, path matrix)
    */
   def calculateAllPaths(weightMatrix: Matrix): (Matrix, Matrix) = {
