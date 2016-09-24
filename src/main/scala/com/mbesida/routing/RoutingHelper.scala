@@ -21,7 +21,7 @@ object RoutingHelper {
     val allSources = routes.map(_.source).toSet
     val allDestinations = routes.map(_.destination).toSet
     val union = allSources union allDestinations
-    (0 until union.size).zip(union).map{case (i, s) => (s -> i)}.toMap
+    (0 until union.size).zip(union).map { case (i, s) => (s -> i) }.toMap
   }
 
   def buildWeightMatrix(routes: List[Route], indexMap: Map[String, Int]): Matrix = {
@@ -33,7 +33,7 @@ object RoutingHelper {
   }
 
   /**
-   * Implementation of Floyd–Warshall algorithm with path reconstruction modifications
+   * Implementation of Floyd-Warshall algorithm with path reconstruction modifications
    * @return (distance matrix, path matrix)
    */
   def calculateAllPaths(weightMatrix: Matrix): (Matrix, Matrix) = {
@@ -61,7 +61,7 @@ object RoutingHelper {
     else {
       val path = ListBuffer(from)
       var k: Option[Int] = Some(from)
-      while(k.isDefined && k.get != to) {
+      while (k.isDefined && k.get != to) {
         k = pathMatrix(k.get)(to)
         path.append(k.get)
       }
