@@ -10,8 +10,8 @@
 
 ## problem definition
  
- You are asked to develop a new routing solution for public transport system that lets peo-
- ple search for the quickest route between to given stations. Your customer is also asking for the
+ You are asked to develop a new routing solution for public transport system that lets people 
+ search for the quickest route between to given stations. Your customer is also asking for the
  posibility to find stations nearby a given station that can be reached within a given time.
  
  The transport network is modelled as a directed graph with edges that represent a connection between 
